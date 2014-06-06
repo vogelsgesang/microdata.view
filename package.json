@@ -1,0 +1,9 @@
+{
+  "name": "SemanticsInspector",
+  "title": "SemanticsInspector",
+  "id": "jid1-QF1HUzLSlg2nEA",
+  "description": "displays microdata embeded into a web page",
+  "author": "Adrian Vogelsgesang",
+  "license": "MPL 2.0",
+  "version": "0.1"
+}
