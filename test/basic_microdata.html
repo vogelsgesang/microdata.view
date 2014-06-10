@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html><head>
+  <meta charset="utf8">
+  <title>invented test data</title>
+  <style>
+    span[itemscope] {
+      display: inline-block;
+      vertical-align: top;
+      border: 1px solid black;
+      padding: .5em;
+    }
+  </style>
+</head><body>
+  <span itemscope itemtype="type1 type2" itemid="firstItem">
+    itemscope, itemid=&quot;firstItem&quot;, itemtype=&quot;type1 type2&quot;
+    <dl>
+      <dt>aProperty</dt>
+      <dd itemprop="aProperty">a value</dd>
+      <dt>anotherProperty</dt>
+      <dd itemprop="anotherProperty">another value</dd>
+    </dl>
+  </span>
+  <span itemscope itemtype="type2">
+    itemscope, itemtype=&quot;type2&quot;
+    <dl>
+      <dt>aProperty</dt>
+      <dd itemprop="aProperty">a value</dd>
+      <dt>anotherProperty</dt>
+      <dd itemprop="anotherProperty">another value</dd>
+      <dd itemprop="anotherProperty">yet another value</dd>
+      <dt>yetAnotherProperty</dt>
+      <dd itemprop="yetAnotherProperty">false</dd>
+    </dl>
+  </span>
+  <span itemscope itemtype="wisdom">
+    itemscope, itemtype=&quot;wisdom&quot;
+    <dl>
+      <dt>Name</dt>
+      <dd itemprop="name">Hitchhiker's joke</dd>
+      <dt>answeredQuestions</dt>
+      <dd>
+        <span itemProp="answeredQuestions" itemscope>
+          <dl>
+            <dt>question</dt>
+            <dd itemprop="question">unknown</dd>
+            <dt>answer</dt>
+            <dd itemprop="answer">42</dd>
+          </dl>
+        </span>
+      </dd>
+    </dl>
+  </span>
+</body></html>
