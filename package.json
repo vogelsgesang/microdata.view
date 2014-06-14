@@ -1,6 +1,6 @@
 {
-  "name": "semantics-inspector",
-  "title": "Semantics Inspector",
+  "name": "microdata-view",
+  "title": "microdata.view",
   "id": "jid1-QF1HUzLSlg2nEA",
   "description": "displays microdata embeded into a web page",
   "author": "Adrian Vogelsgesang",
