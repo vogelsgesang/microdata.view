@@ -9,12 +9,24 @@ function showPage(name) {
 }
 showPage("loading");
 
+function escapeHtml(string) {
+  return string.replace("&", "&amp;")
+               .replace("<", "&lt;")
+               .replace(">", "&gt;")
+               .replace("\"", "&quot;");
+}
+function renderMicroData(microData) {
+  return microData.items.map(function(item) {
+    return '<pre>' + escapeHtml(JSON.stringify(item, null, 2)) + '</pre>';
+  }).join('<hr>');
+}
+
 //updates the view
 self.port.on("updateMicroData", displayMicroData);
 function displayMicroData(microData) {
   var items = microData.items;
   if(items.length > 0) {
-    document.getElementById("json").textContent = JSON.stringify(items, null, 2);
+    document.getElementById("microdata").innerHTML = renderMicroData(microData);
     showPage("microdata");
   } else {
     showPage("no-microdata");
